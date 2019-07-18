@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Good Monday Test</title>
+		<script type="text/javascript" src="JavaScript/SumCalculation.js"></script>
+		<style>
+			.input_data
+			{
+				width: 200px;
+				heigth: 250px;
+				float: left;
+				margin: 10px;
+			}
+			.number_list_box
+			{
+				border: 2px dashed black;
+				padding: 5px;
+			}
+			.result_box
+			{
+				padding:10px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>Pair and singles max sum</h1>
+		<p>
+		Introduce all the numbers you wnat inyo the numbers list. When you are done giving numbers, click the calculate number
+		and the list will be divide the list into the same ammount of single numbers and number pairs. Pairs will be multiplied,
+        finally all the multiplications results and the single numbers will be summed.
+		This result will be the maximum value that the list can give between all the different convinations of pairs and singles.
+		<br/> 
+		<br/> 
+		<em>note: if you enter a number with decimals it will be rounded to the lowest value.</em>
+		</p>
+		<div class="input_data">
+			<form action ="" method="POST" id="form" onsubmit="return false;"> 
+				<label for="number">Add a number to the list:</label><br/>
+				<input type="number" name="number" id="number" placeholder="Add an entire number"/>
+				<br/>
+				<button id="addNumber">Add Number</button>
+				<br/>
+				<br/>
+				<button id="calculate">Calculate</button>
+				<br/>
+				<button id="reset">Reset</button>
+			</form>
+		</div>
+		<div class="input_data number_list_box">
+			<h3>Number list</h3>
+			<hr>
+			<ul id="number_list">
+			</ul>
+		</div>
+		<div class="input_data number_list_box result_box">
+			<h3>Result:</h3>
+			<hr>
+			<h4>Pairs:</h4>
+			<ul id="pairs_list">
+			</ul>
+			<h4>Singles:</h4>
+			<ul id="single_list">
+			</ul>
+			<h4>Sum:</h4>
+			<span id="sum"></span>
+		</div>
+	</body>
+</html>
